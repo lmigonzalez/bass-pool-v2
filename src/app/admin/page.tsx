@@ -84,7 +84,7 @@ const Page = () => {
 
   return (
     <main className="my-36 px-6">
-      <h1>Gallery Admin</h1>
+      <h1 className="text-3xl font-bold mb-10">Gallery Admin</h1>
 
       <div className="flex justify-end gap-5">
         <div className="relative w-1/2">
@@ -110,7 +110,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 justify-center gap-1 mt-16">
+      <div className="max-w-[800px] grid grid-cols-3 justify-center gap-1 mt-16 m-auto">
         {imagesId.map((item, index) => {
           return (
             <div
@@ -122,6 +122,7 @@ const Page = () => {
                 alt="pool work image"
                 width={250}
                 height={250}
+                className="aspect-square"
               />
               <div className="p-1 rounded-full bg-red-500 text-white mt-auto flex justify-end items-center">
                 <button onClick={() => deleteImage(item.$id)}>
