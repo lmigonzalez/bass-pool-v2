@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import { useUser } from "@/lib/UserProvider";
+import Profile from "./Profile";
 const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 flex justify-center pt-3">
@@ -17,6 +19,9 @@ const Navbar = () => {
           </li>
           <li className="hover:text-sky-800 transition-colors">
             <Link href={"/contact"}>Contact Us</Link>
+          </li>
+          <li>
+            <Profile />
           </li>
         </ul>
       </nav>
