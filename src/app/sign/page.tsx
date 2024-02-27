@@ -25,11 +25,11 @@ const Sign = () => {
 
   async function login(email: string, password: string) {
     user?.login(email, password);
-    router.push("/");
+    router.push("/admin");
   }
   async function signUp(name: string, email: string, password: string) {
     user?.register(email, password, name);
-    router.push("/");
+    router.push("/admin");
   }
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();

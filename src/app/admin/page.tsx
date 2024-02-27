@@ -3,13 +3,16 @@ import React, { useState, useEffect } from "react";
 import { storage, BUCKET_ID } from "../AppWrite";
 import { ID } from "appwrite";
 import Image from "next/image";
+import { useUser } from "@/lib/UserProvider";
+import { useRouter } from "next/navigation";
+
 interface imageProps {
   $id: string;
   href: string | undefined;
 }
-const page = () => {
+const Page = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-
+  const user = useUser();
   const [imagesId, setImagesId] = useState<imageProps[]>([]);
 
   useEffect(() => {
@@ -66,6 +69,17 @@ const page = () => {
     } catch (e) {
       console.log(e);
     }
+  }
+
+  const { push } = useRouter();
+  if (user) console.log("first");
+  if (!(user && user.current)) {
+    push("/sign");
+    return (
+      <div className="fixed w-full h-full flex justify-center items-center bg-black opacity-20">
+        ...loading
+      </div>
+    );
   }
 
   return (
@@ -135,4 +149,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

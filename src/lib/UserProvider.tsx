@@ -1,7 +1,7 @@
 "use client";
 import { ID, Models } from "appwrite";
 import { createContext, useContext, useEffect, useState } from "react";
-import { account, createUserInfo } from "../app/AppWrite";
+import { account } from "../app/AppWrite";
 import React from "react";
 
 type contextType = {
@@ -33,7 +33,6 @@ export function UserProvider(props: any) {
   async function register(email: string, password: string, name: string) {
     const id = ID.unique();
     await account.create(id, email, password, name);
-    createUserInfo({ userId: id, nickname: name });
     await login(email, password);
   }
 
