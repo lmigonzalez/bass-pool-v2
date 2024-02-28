@@ -25,12 +25,6 @@ const Page = () => {
     });
   });
 
-  useEffect(() => {
-    checkAccount().then((res) => {
-      if (res.$id) push("/admin");
-    });
-  });
-
   async function getImages() {
     try {
       const images = await storage.listFiles(BUCKET_ID || "");
