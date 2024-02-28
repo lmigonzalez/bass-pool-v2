@@ -13,9 +13,11 @@ const Page = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [imagesId, setImagesId] = useState<imageProps[]>([]);
 
+  const { push } = useRouter();
   useEffect(() => {
     getImages();
   }, []);
+
   useEffect(() => {
     account.get().then((res) => {
       if (!res.$id) push("/sign");
@@ -74,8 +76,6 @@ const Page = () => {
       console.log(e);
     }
   }
-
-  const { push } = useRouter();
 
   return (
     <main className="my-36 px-6">
