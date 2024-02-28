@@ -1,8 +1,10 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { storage, BUCKET_ID } from "../AppWrite";
 import Image from "next/image";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
+
 import {
   Carousel,
   CarouselContent,
@@ -10,12 +12,46 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../components/ui/carousel";
+
+interface imageProps {
+  $id: string;
+  href: string | undefined;
+}
+
 const Gallery = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
 
-  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const [imagesId, setImagesId] = useState<imageProps[]>([]);
+  useEffect(() => {
+    getImages();
+  }, []);
+  async function getImages() {
+    try {
+      const images = await storage.listFiles(BUCKET_ID || "");
+
+      const ids = images.files.map((item) => {
+        const id = item.$id; // Assuming item has $id property
+        const href = imageView(id);
+        return { $id: id, href: href };
+      });
+
+      setImagesId(ids);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  function imageView(id: string) {
+    try {
+      const image = storage.getFileView(BUCKET_ID || "", id);
+      console.log(image);
+      return image.href;
+    } catch (e) {
+      console.log(e);
+    }
+  }
   return (
     <section className="py-16 text-center">
       <h2 className="text-center text-2xl font-semibold">
@@ -33,15 +69,15 @@ const Gallery = () => {
           onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
-            {data.map((item, index) => {
+            {imagesId.map((item, index) => {
               return (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <Image
-                    src={"/image.jpg"}
-                    alt="img"
+                    src={`${item.href}`}
+                    alt="pool work image"
                     width={1280}
                     height={1280}
-                    className="rounded shadow-md"
+                    className="rounded shadow-md aspect-square"
                   />
                 </CarouselItem>
               );
@@ -54,7 +90,7 @@ const Gallery = () => {
       <div className="flex justify-center mt-5">
         {" "}
         <Link
-          href={"/contact"}
+          href={"/gallery"}
           className="px-8 py-2  text-sky-950 rounded flex items-center w-fit gap-3 "
         >
           Explore More

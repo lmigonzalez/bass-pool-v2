@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { storage, BUCKET_ID } from "../AppWrite";
 import Image from "next/image";
-import Link from "next/link";
 interface imageProps {
   $id: string;
   href: string | undefined;

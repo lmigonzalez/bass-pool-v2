@@ -15,7 +15,7 @@ const Hero = () => {
         </h2>
         <div className="mt-10">
           <Link
-            href={"/"}
+            href={"/contact"}
             className="px-8 py-2 bg-white text-sky-700 font-bold rounded flex items-center w-fit gap-3 hover:bg-sky-950 hover:text-white transition-colors"
           >
             Get a Free Quote
