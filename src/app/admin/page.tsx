@@ -1,11 +1,12 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { account } from "../AppWrite";
 import AdminGallery from "../components/AdminGallery";
 
 const Page = () => {
   const router = useRouter();
+  const [isAuth, setIsAuth] = useState(false);
 
   useEffect(() => {
     async function checkIfAdmin() {
@@ -14,13 +15,19 @@ const Page = () => {
         if (!session || session.$id === "null") {
           router.push(`/sign`);
         }
+        setIsAuth(true);
       } catch (e) {
+        setIsAuth(false);
         router.push(`/sign`);
       }
     }
 
     checkIfAdmin();
   }, [router]);
+
+  if (!isAuth) {
+    return <p>No Admin</p>;
+  }
 
   return (
     <main className="px-6">
