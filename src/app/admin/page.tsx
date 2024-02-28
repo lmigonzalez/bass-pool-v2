@@ -18,6 +18,12 @@ const Page = () => {
   useEffect(() => {
     getImages();
   }, []);
+  useEffect(() => {
+    account.get().then((res) => {
+      if (!res.$id) push("/sign");
+      console.log(res);
+    });
+  });
 
   useEffect(() => {
     checkAccount().then((res) => {

@@ -33,7 +33,11 @@ const Sign = () => {
 
   return (
     <div>
-      <div className="w-[700px] max-w-full m-auto mt-32">
+      <div className="w-[700px] max-w-full m-auto mt-20">
+        <div className=" mb-5">
+          <p className="text-center text-2xl">login</p>
+        </div>
+
         <form onSubmit={(e) => onSubmit(e)} className="space-y-4 ">
           <input
             type="email"
