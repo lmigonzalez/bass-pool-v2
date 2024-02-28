@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { storage, BUCKET_ID, account } from "../AppWrite";
+import { storage, BUCKET_ID, account, checkAccount } from "../AppWrite";
 import { ID } from "appwrite";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -19,13 +19,10 @@ const Page = () => {
     getImages();
   }, []);
 
-  async function checkAccount() {
-    const res = await account.get();
-    if (!res.$id) push("/sign");
-    console.log(res.$id, "asd");
-  }
   useEffect(() => {
-    checkAccount();
+    checkAccount().then((res) => {
+      if (res.$id) push("/admin");
+    });
   });
 
   async function getImages() {
