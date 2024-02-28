@@ -21,8 +21,8 @@ const Page = () => {
 
   async function checkAccount() {
     const res = await account.get();
-    if (res) push("/sign");
-    console.log(res);
+    if (!res.$id) push("/sign");
+    console.log(res.$id, "asd");
   }
   useEffect(() => {
     checkAccount();
