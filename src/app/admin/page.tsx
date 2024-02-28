@@ -30,7 +30,7 @@ const Page = () => {
   }
 
   return (
-    <main className="px-6">
+    <main className="w-[1380px] max-w-full m-auto my-36 px-6">
       <AdminGallery />
     </main>
   );

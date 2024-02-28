@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const page = () => {
   return (
-    <main className="mt-36 px-6">
+    <main className="w-[1380px] max-w-full m-auto my-36 px-6">
       <h1 className="text-4xl font-bold mb-3 ">About Us</h1>
 
       <div className="mt-10 space-y-5">

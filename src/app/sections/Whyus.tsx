@@ -6,7 +6,7 @@ const Whyus = () => {
       <h2 className="text-center text-2xl font-semibold">
         Why Choose Bass Pool Group?
       </h2>
-      <ul className="max-w-[1000px] m-auto space-y-5 mt-10 list-disc">
+      <ul className="max-w-[1380px] m-auto space-y-5 mt-10 list-disc">
         <li>
           <strong>Miami Expertise:</strong>
           With years of experience serving the vibrant Miami community, we

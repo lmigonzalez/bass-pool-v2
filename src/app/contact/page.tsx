@@ -17,7 +17,7 @@ const Page = () => {
 
   function onSubmit() {}
   return (
-    <main className="my-36 px-6">
+    <main className="w-[1380px] max-w-full m-auto my-36 px-6">
       <h1 className="text-4xl font-bold mb-10 text-center">Contact Us</h1>
 
       <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-5">
