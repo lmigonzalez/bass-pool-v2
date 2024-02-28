@@ -1,9 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { storage, BUCKET_ID } from "../AppWrite";
+import { storage, BUCKET_ID, account } from "../AppWrite";
 import { ID } from "appwrite";
 import Image from "next/image";
-import { useUser } from "@/lib/UserProvider";
 import { useRouter } from "next/navigation";
 
 interface imageProps {
@@ -12,12 +11,17 @@ interface imageProps {
 }
 const Page = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const user = useUser();
   const [imagesId, setImagesId] = useState<imageProps[]>([]);
 
   useEffect(() => {
     getImages();
   }, []);
+  useEffect(() => {
+    account.get().then((res) => {
+      if (!res.$id) push("/sign");
+      console.log(res);
+    });
+  });
 
   async function getImages() {
     try {
@@ -72,15 +76,6 @@ const Page = () => {
   }
 
   const { push } = useRouter();
-  if (user) console.log("first");
-  if (!(user && user.current)) {
-    push("/sign");
-    return (
-      <div className="fixed w-full h-full flex justify-center items-center bg-black opacity-20">
-        ...loading
-      </div>
-    );
-  }
 
   return (
     <main className="my-36 px-6">
