@@ -14,15 +14,18 @@ const Page = () => {
   const [imagesId, setImagesId] = useState<imageProps[]>([]);
 
   const { push } = useRouter();
+
   useEffect(() => {
     getImages();
   }, []);
 
+  async function checkAccount() {
+    const res = await account.get();
+    if (res) push("/sign");
+    console.log(res);
+  }
   useEffect(() => {
-    account.get().then((res) => {
-      if (!res.$id) push("/sign");
-      console.log(res);
-    });
+    checkAccount();
   });
 
   async function getImages() {
