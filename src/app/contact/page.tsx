@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { useFormik } from "formik";
 
-const page = () => {
+const Page = () => {
   const { values, errors, touched, handleChange, handleSubmit } = useFormik({
     initialValues: {
       name: "",
@@ -71,4 +71,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

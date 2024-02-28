@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-sky-700  z-10 bg-opacity-35 backdrop-blur-[1px]"></div>
       <div className="relative z-20 text-white">
         <h1 className="text-4xl font-bold mb-5">
-          Miami's Premier Pool Builders:{" "}
+          Miami&apos;s Premier Pool Builders:{" "}
           <span className="">Bass Pool Group</span>
         </h1>
         <h2 className="text-2xl">

@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { date } from "yup";
 
-const page = () => {
+const Page = () => {
   const en = [
     "By signing this contract, the client acknowledges and accepts the following terms and conditions, which complement the current estimate:",
     "I. Patio repairs exclusions: The present estimate does not include patio repairs due to any damage caused by machinery access to the pool.",
@@ -66,4 +65,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

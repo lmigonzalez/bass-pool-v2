@@ -8,7 +8,7 @@ interface imageProps {
   href: string | undefined;
 }
 
-const page = () => {
+const Page = () => {
   const [imagesId, setImagesId] = useState<imageProps[]>([]);
   const [isGrid, setIsGrid] = useState(true);
 
@@ -126,4 +126,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -8,11 +8,11 @@ const page = () => {
       <div className="mt-10 space-y-5">
         <div className="">
           <p>
-            At Bass Pool Group, we're passionate about transforming backyard
+            At Bass Pool Group, we&apos;re passionate about transforming backyard
             dreams into reality.{" "}
           </p>
           <p>
-            With years of experience serving the Miami community, we've had the
+            With years of experience serving the Miami community, we&apos;ve had the
             privilege of turning hundreds of ordinary yards into extraordinary
             paradises, leaving our customers thrilled with the results.
           </p>
@@ -21,11 +21,11 @@ const page = () => {
           <p>
             <strong>Our mission is simple: </strong>
             to provide exceptional pool construction and renovation services
-            that exceed our clients' expectations.
+            that exceed our clients&apos; expectations.
           </p>
           <p>
             We understand that building a pool is more than just a construction
-            project—it's an investment in your home, your lifestyle, and your
+            project—it&apos;s an investment in your home, your lifestyle, and your
             enjoyment for years to come.
           </p>
         </div>
@@ -44,7 +44,7 @@ const page = () => {
         </div>
         <div className="">
           <p>
-            Whether you're looking to create a serene retreat for relaxation, a
+            Whether you&apos;re looking to create a serene retreat for relaxation, a
             lively hub for entertainment, or a refreshing escape from the Miami
             heat, Bass Pool Group has the expertise and dedication to bring your
             vision to life.

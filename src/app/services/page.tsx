@@ -51,7 +51,7 @@ const page = () => {
             Our renovation process includes repairing cracks, applying a new
             pool finish, installing new waterline tiles and coping, and even
             adding additional features like a spa or waterfall to enhance your
-            pool's functionality and aesthetics.
+            pool&apos;s functionality and aesthetics.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ const page = () => {
             construction process according to your budget and timeline.
           </p>
           <p className="opacity-60">
-            At Bass Pool Group, we're committed to delivering exceptional
+            At Bass Pool Group, we&apos;re committed to delivering exceptional
             results while providing a stress-free and rewarding experience for
             our clients.
           </p>

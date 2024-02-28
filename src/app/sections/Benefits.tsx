@@ -33,7 +33,7 @@ const Benefits = () => {
           <li className="p-4 bg-sky-950 rounded-xl">
             <strong>Entertainment Hub: </strong> A pool is a focal point for
             outdoor entertainment, offering endless opportunities for fun and
-            socializing with family and friends. Whether it's hosting poolside
+            socializing with family and friends. Whether it&apos;s hosting poolside
             barbecues, pool parties, or simply enjoying quality time together,
             your pool becomes a gathering place where cherished memories are
             made.
@@ -59,7 +59,7 @@ const Benefits = () => {
           <li className="p-4 bg-sky-950 rounded-xl">
             <strong>Family Bonding: </strong> A pool encourages quality family
             time and fosters stronger bonds between family members as they swim,
-            play, and relax together. It's a place where parents can teach their
+            play, and relax together. It&apos;s a place where parents can teach their
             children to swim, play games, and create cherished memories that
             will last a lifetime.
           </li>
