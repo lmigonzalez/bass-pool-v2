@@ -22,13 +22,20 @@ const Sign = () => {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const res = await account.createEmailPasswordSession(
-      userData.email,
-      userData.password
-    );
-    account.get().then((res) => {
-      if (res.$id) router.push("admin");
-    });
+
+    try {
+      await account.createEmailPasswordSession(
+        userData.email,
+        userData.password
+      );
+
+      account.get().then((res) => {
+        if (res.$id) router.push("/admin");
+      });
+
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   return (
