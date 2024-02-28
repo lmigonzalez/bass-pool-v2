@@ -7,7 +7,6 @@ const Sign = () => {
   const initialData = {
     email: "",
     password: "",
-    name: "",
   };
 
   const router = useRouter();
@@ -27,15 +26,14 @@ const Sign = () => {
       userData.email,
       userData.password
     );
+    account.get().then((res) => {
+      if (res.$id) router.push("admin");
+    });
   }
 
   return (
     <div>
-      <div className="w-[700px] max-w-full m-auto mt-20">
-        <div className=" mb-5">
-          <p className="text-center text-2xl">login</p>
-        </div>
-
+      <div className="w-[700px] max-w-full m-auto mt-32">
         <form onSubmit={(e) => onSubmit(e)} className="space-y-4 ">
           <input
             type="email"
