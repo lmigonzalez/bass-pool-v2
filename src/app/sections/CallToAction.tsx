@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const CallToAction = () => {
   return (
-    <section className="py-24 text-center">
+    <section className="py-24 text-center px-4 md:px-0">
       <p className="max-w-[700px] text-center m-auto">
         Experience the Ultimate in Luxury Living with Bass Pool Group. Contact
         us today to turn your dream pool into a reality and elevate your outdoor
@@ -12,7 +12,7 @@ const CallToAction = () => {
         {" "}
         <Link
           href={"/contact"}
-          className="px-8 py-2 bg-sky-950 text-white font-bold rounded flex items-center w-fit gap-3 hover:bg-sky-950 hover:text-white transition-colors"
+          className="px-8 py-2 bg-sky-950 text-white font-bold rounded flex items-center w-fit gap-3 hover:rounded-full transition-transform"
         >
           Get a Free Quote
           <svg

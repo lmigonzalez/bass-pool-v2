@@ -17,7 +17,7 @@ const Page = () => {
 
   function onSubmit() {}
   return (
-    <main className="my-36 px-6">
+    <main className="my-28 md:my-36 px-6">
       <h1 className="text-4xl font-bold mb-10 text-center">Contact Us</h1>
 
       <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-5">
@@ -28,7 +28,7 @@ const Page = () => {
           width={1000}
           height={1000}
         />
-        <form className="flex flex-col justify-between md:w-1/2">
+        <form className="flex flex-col justify-between md:w-1/2 gap-5">
           <input
             type="text"
             name="name"

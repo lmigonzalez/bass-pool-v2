@@ -1,10 +1,6 @@
 import {
   Client,
   Storage,
-  ID,
-  Models,
-  Databases,
-  Query,
   Account,
 } from "appwrite";
 

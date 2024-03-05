@@ -2,7 +2,7 @@ import React from "react";
 
 const Whyus = () => {
   return (
-    <section className="pt-36 pb-16">
+    <section className="pt-36 pb-16 px-6">
       <h2 className="text-center text-2xl font-semibold">
         Why Choose Bass Pool Group?
       </h2>

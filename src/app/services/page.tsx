@@ -2,8 +2,8 @@ import React from "react";
 
 const page = () => {
   return (
-    <main className="mt-36 px-6">
-      <h1 className="text-4xl font-bold mb-3 ">Our Services</h1>
+    <main className="my-28 md:my-36 px-6">
+      <h1 className="text-4xl font-bold mb-10">Our Services</h1>
       <h2 className="text-2xl font-semibold">
         Crafting and Revitalizing Your Perfect Pool Experience
       </h2>

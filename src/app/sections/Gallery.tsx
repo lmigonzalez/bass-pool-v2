@@ -53,7 +53,7 @@ const Gallery = () => {
     }
   }
   return (
-    <section className="py-16 text-center">
+    <section className="py-16 text-center px-4 md:px-0">
       <h2 className="text-center text-2xl font-semibold">
         Poolscapes Showcase
       </h2>

@@ -42,7 +42,7 @@ const Page = () => {
   }
 
   return (
-    <main className="my-36 px-6">
+    <main className="my-28 md:my-36 px-6">
       <h1 className="text-4xl font-bold mb-10 text-center">Gallery</h1>
 
       <div className="flex justify-end gap-2 max-w-[800px] m-auto">

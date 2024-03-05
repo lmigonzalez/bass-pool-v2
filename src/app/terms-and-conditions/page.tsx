@@ -41,7 +41,7 @@ const Page = () => {
     setEnglish(!english);
   }
   return (
-    <main className="my-36 px-6">
+    <main className="my-28 md:my-36 px-6">
       {" "}
       <h1 className="text-4xl font-bold mb-10 text-center">
         {english ? "Terms & Conditions" : "Terminos & Condiciones"}

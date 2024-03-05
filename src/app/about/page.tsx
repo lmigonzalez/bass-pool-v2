@@ -2,19 +2,20 @@ import React from "react";
 import Link from "next/link";
 const page = () => {
   return (
-    <main className="mt-36 px-6">
-      <h1 className="text-4xl font-bold mb-3 ">About Us</h1>
+    <main className="my-28 md:my-36 px-6">
+      <h1 className="text-4xl font-bold ">About Us</h1>
 
       <div className="mt-10 space-y-5">
         <div className="">
           <p>
-            At Bass Pool Group, we&apos;re passionate about transforming backyard
-            dreams into reality.{" "}
+            At Bass Pool Group, we&apos;re passionate about transforming
+            backyard dreams into reality.{" "}
           </p>
           <p>
-            With years of experience serving the Miami community, we&apos;ve had the
-            privilege of turning hundreds of ordinary yards into extraordinary
-            paradises, leaving our customers thrilled with the results.
+            With years of experience serving the Miami community, we&apos;ve had
+            the privilege of turning hundreds of ordinary yards into
+            extraordinary paradises, leaving our customers thrilled with the
+            results.
           </p>
         </div>
         <div className="">
@@ -25,8 +26,8 @@ const page = () => {
           </p>
           <p>
             We understand that building a pool is more than just a construction
-            project—it&apos;s an investment in your home, your lifestyle, and your
-            enjoyment for years to come.
+            project—it&apos;s an investment in your home, your lifestyle, and
+            your enjoyment for years to come.
           </p>
         </div>
 
@@ -44,10 +45,10 @@ const page = () => {
         </div>
         <div className="">
           <p>
-            Whether you&apos;re looking to create a serene retreat for relaxation, a
-            lively hub for entertainment, or a refreshing escape from the Miami
-            heat, Bass Pool Group has the expertise and dedication to bring your
-            vision to life.
+            Whether you&apos;re looking to create a serene retreat for
+            relaxation, a lively hub for entertainment, or a refreshing escape
+            from the Miami heat, Bass Pool Group has the expertise and
+            dedication to bring your vision to life.
           </p>
         </div>
         <div className="">
