@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="bg-[url('/hero-pool.webp')] w-full min-h-[500px] bg-no-repeat bg-cover bg-center relative flex justify-start items-center px-6">
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-sky-700  z-10 bg-opacity-35 backdrop-blur-[1px]"></div>
-      <div className="relative z-20 text-white">
+      <div className="w-[1380px] max-w-full  m-auto relative z-20 text-white">
         <h1 className="text-2xl md:text-4xl font-bold mb-5">
           Miami&apos;s Premier Pool Builders:{" "}
           <span className="">Bass Pool Group</span>
