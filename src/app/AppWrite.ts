@@ -16,3 +16,8 @@ client
 export const storage = new Storage(client);
 export const account = new Account(client);
 export default client;
+
+export async function checkAccount() {
+  const res = await account.get();
+  return res;
+}

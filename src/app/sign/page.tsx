@@ -22,18 +22,29 @@ const Sign = () => {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const res = await account.createEmailPasswordSession(
-      userData.email,
-      userData.password
-    );
-    account.get().then((res) => {
-      if (res.$id) router.push("admin");
-    });
+
+    try {
+      await account.createEmailPasswordSession(
+        userData.email,
+        userData.password
+      );
+
+      account.get().then((res) => {
+        if (res.$id) router.push("/admin");
+      });
+
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   return (
     <div>
-      <div className="w-[700px] max-w-full m-auto mt-32">
+      <div className="w-[700px] max-w-full m-auto mt-20">
+        <div className=" mb-5">
+          <p className="text-center text-2xl">login</p>
+        </div>
+
         <form onSubmit={(e) => onSubmit(e)} className="space-y-4 ">
           <input
             type="email"

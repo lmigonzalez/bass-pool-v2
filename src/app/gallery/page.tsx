@@ -88,7 +88,7 @@ const Page = () => {
       </div>
 
       <div
-        className={`max-w-[800px] grid justify-center gap-1 mt-10 m-auto ${
+        className={`w-fit grid justify-center gap-1 mt-10 m-auto ${
           isGrid ? "grid-cols-3 " : "grid-cols-1"
         }`}
       >
