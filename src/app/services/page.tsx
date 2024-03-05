@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <main className="my-28 md:my-36 px-6">
+    <main className="my-28 md:my-36 px-6 w-[1380px] max-w-full  m-auto">
       <h1 className="text-4xl font-bold mb-10">Our Services</h1>
       <h2 className="text-2xl font-semibold">
         Crafting and Revitalizing Your Perfect Pool Experience

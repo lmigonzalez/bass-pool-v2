@@ -17,7 +17,7 @@ const Page = () => {
 
   function onSubmit() {}
   return (
-    <main className="my-28 md:my-36 px-6">
+    <main className="my-28 md:my-36 px-6 w-[1380px] max-w-full  m-auto">
       <h1 className="text-4xl font-bold mb-10 text-center">Contact Us</h1>
 
       <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-5">
@@ -61,7 +61,7 @@ const Page = () => {
             className="pb-8 border-b-[2px] caret-sky-900 focus:border-transparent focus:border-b-sky-900  outline-none appearance-none"
           ></textarea>
           <div className="flex justify-end mt-10 md:mt-0">
-            <button className="px-8 py-2 bg-sky-950 text-white  rounded flex items-center w-fit gap-3 hover:bg-sky-950 hover:text-white transition-colors">
+            <button className="px-8 py-2 bg-sky-950 text-white  rounded flex items-center w-fit gap-3 hover:rounded-full transition-transform">
               Submit
             </button>
           </div>
