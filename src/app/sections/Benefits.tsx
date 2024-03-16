@@ -2,8 +2,8 @@ import React from "react";
 
 const Benefits = () => {
   return (
-    <section className="py-24 bg-[url('/hero-pool.webp')] bg-no-repeat bg-cover bg-center relative px-4 md:px-0">
-      <div className="absolute top-0 left-0 w-full h-full bg-sky-950 bg-opacity-20 backdrop-blur-[2px] z-10"></div>
+    <section className="py-24 bg-gradient-to-tr from-sky-300 to-sky-500 relative px-4 md:px-0">
+      {/* <div className="absolute top-0 left-0 w-full h-full bg-sky-950 bg-opacity-20 backdrop-blur-[2px] z-10"></div> */}
       <h2 className="text-center text-2xl font-semibold relative z-20 text-white">
         Benefits of Owning a Swimming Pool
       </h2>
