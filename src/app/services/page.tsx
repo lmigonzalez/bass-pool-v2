@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import React from "react";
-
+import Link from "next/link";
+export const metadata: Metadata = {
+  title: "Miami Pool Services | Construction & Renovation - Bass Pool Group",
+  description:
+    "Discover top-tier pool construction and renovation services in Miami with Bass Pool Group. From custom pool building to comprehensive renovations and repairs, our expert team ensures superior quality and satisfaction. Explore our detailed production process and flexible payment options to make your dream pool a reality. Visit our services page for more information.",
+};
 const page = () => {
   return (
     <main className="my-28 md:my-36 px-6 w-[1380px] max-w-full  m-auto">
@@ -34,6 +40,11 @@ const page = () => {
             Plus, enjoy peace of mind with our one-year warranty on both
             structure and equipment.
           </p>
+          <div className="mt-3 text-sky-500 hover:text-sky-800 text-lg">
+            <Link className="" href={"/services/pool-construction"}>
+              Read more...
+            </Link>
+          </div>
         </div>
 
         <div className="">
