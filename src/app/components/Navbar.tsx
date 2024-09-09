@@ -16,10 +16,13 @@ const Navbar = () => {
             <Link href={"/services"}>Services</Link>
           </li>
           <li className="hover:text-sky-800 transition-colors">
-            <Link href={"/about"}>About Us</Link>
+            <Link href={"/about"}>About</Link>
           </li>
           <li className="hover:text-sky-800 transition-colors">
-            <Link href={"/contact"}>Contact Us</Link>
+            <Link href={"/contact"}>Contact</Link>
+          </li>
+          <li className="text-sky-500 hover:text-sky-800 transition-colors">
+            <Link href={"tel:7863122445"}>(786) 312-2445</Link>
           </li>
         </ul>
       </nav>

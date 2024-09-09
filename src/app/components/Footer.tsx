@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="mt-auto text-center py-10 bg-gray-800 text-white">
       <p className="font-light">
-        ©2023 Bass Pool Group - All rights reserved |{" "}
+        ©{new Date().getFullYear()} Bass Pool Group - All rights reserved |{" "}
         <Link className="text-sky-500" href={"/terms-and-conditions"}>
           Terms & Conditions
         </Link>{" "}
