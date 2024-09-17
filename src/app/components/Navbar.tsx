@@ -15,6 +15,9 @@ const Navbar = () => {
           <li className="hover:text-sky-800 transition-colors">
             <Link href={"/services"}>Services</Link>
           </li>
+          {/* <li className="hover:text-sky-800 transition-colors">
+            <Link href={"/pool-improvements"}>Pool Improvements</Link>
+          </li> */}
           <li className="hover:text-sky-800 transition-colors">
             <Link href={"/about"}>About</Link>
           </li>
